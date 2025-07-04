@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Villa Directory – Sicily Luxury Villas
 
-## Getting Started
+This is a simple web application for browsing and inquiring about luxury villas in Sicily.
 
-First, run the development server:
+## Features
 
-```bash
+- Villa Directory Page:
+
+  - List of villas showing name, area, short description, price per night, and photo.
+  - Filter by area (Palermo, Trapani, Pantelleria).
+  - Filter by availability dates using a date picker.
+
+- Villa Detail Page:
+
+  - Gallery of all villa photos.
+  - Full description, amenities, unavailable dates.
+  - Map preview using Google Maps embed.
+
+- Inquiry Form:
+  - Includes fields for name, email, phone (optional), arrival/departure dates, and message.
+  - Sends inquiry via EmailJS.
+  - Shows confirmation after submission.
+
+## How to Run
+
+1. Clone the repository:
+git clone https://github.com/ItsThomas7/VillaDirectory.git
+cd VillaDirectory
+
+2. Install dependencies:
+npm install
+
+3. Set up environment variables (for EmailJS if used):
+
+touch .env.local
+
+4. Set your own recipient email in `src/components/InquiryForm.tsx`:
+
+to_email: 'your@email.com'
+
+5. Start the development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Next.js
+- Google Maps embed
+- React Datepicker (instead of Preline Datepicker)
+- EmailJS 
 
-## Learn More
+## Notes
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Villa data is located in `src/data/villas.json`.
+- Villas without photos are shown without images.
