@@ -7,8 +7,7 @@ This is a simple web application for browsing and inquiring about luxury villas 
 - Villa Directory Page:
 
   - List of villas showing name, area, short description, price per night, and photo.
-  - Filter by area (Palermo, Trapani, Pantelleria).
-  - Filter by availability dates using a date picker.
+  - Footer
 
 - Villa Detail Page:
 
@@ -24,13 +23,15 @@ This is a simple web application for browsing and inquiring about luxury villas 
 ## How to Run
 
 1. Clone the repository:
+
 git clone https://github.com/ItsThomas7/VillaDirectory.git
 cd VillaDirectory
 
-2. Install dependencies:
+3. Install dependencies:
+
 npm install
 
-3. Set up environment variables (for EmailJS if used):
+5. Set up environment variables (for EmailJS if used):
 
 touch .env.local
 
